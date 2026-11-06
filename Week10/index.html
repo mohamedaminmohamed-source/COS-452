@@ -27,9 +27,7 @@
       out vec3 v_color;
       void main() {
         gl_Position = u_mvp * vec4(a_position, 1.0);
-        // TODO(student) (d): replace the next line with v_normal = a_normal;
-        // and watch the cube turn. Describe in a JS comment what goes wrong and
-        // why, then put this line back.
+        // only one face is bright and stays that way, its not dynamic anymore. no matrix no light rotation.
         v_normal = mat3(u_model) * a_normal;
         v_color = a_color;
       }`;
